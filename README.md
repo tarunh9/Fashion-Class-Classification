@@ -7,3 +7,4 @@ Each image is 28 pixels in height and 28 pixels in width, for a total of 784 pix
 <br/>
 
 
+![](sample.png)
