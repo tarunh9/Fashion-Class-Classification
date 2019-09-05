@@ -14,27 +14,22 @@ i = random.randint(1, 60000)
 plt.imshow(training[i, 1:].reshape(28, 28))
 label = training[i, 0]
 
-# Let's view more images in a grid format
-# Define the dimensions of the plot grid 
+ 
 W_grid = 15
 L_grid = 15
 
-# fig, axes = plt.subplots(L_grid, W_grid)
-# subplot return the figure object and axes object
-# we can use the axes object to plot specific figures at various locations
 
 fig, axes = plt.subplots(L_grid, W_grid, figsize = (17,17))
 
-axes = axes.ravel() # flaten the 15 x 15 matrix into 225 array
+axes = axes.ravel() 
 
-n_training = len(training) # get the length of the training dataset
+n_training = len(training) 
 
-# Select a random number from 0 to n_training
-for i in np.arange(0, W_grid * L_grid): # create evenly spaces variables 
 
-    # Select a random number
-    index = np.random.randint(0, n_training)
-    # read and display an image with the selected index    
+for i in np.arange(0, W_grid * L_grid): 
+
+    
+    index = np.random.randint(0, n_training)   
     axes[i].imshow( training[index,1:].reshape((28,28)) )
     axes[i].set_title(training[index,0], fontsize = 8)
     axes[i].axis('off')
